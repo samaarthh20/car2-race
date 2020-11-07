@@ -10,6 +10,15 @@ var form, player, game;
 
 var cars, car1, car2, car3, car4;
 
+function preload(){
+  car1Image = loadImage("../images/car1.png");
+  car2Image = loadImage("../images/car2.png");
+  car3Image = loadImage("../images/car3.png");
+  car4Image = loadImage("../images/car4.png");
+
+  groundImage = loadImage("../images/ground.png");
+  trackImage = loadImage("../images/track.png");
+}
 
 function setup(){
   canvas = createCanvas(displayWidth - 20, displayHeight-30);
@@ -28,4 +37,9 @@ function draw(){
     clear();
     game.play();
   }
+
+if(gameState===2){
+  game.end();
+}
+
 }
